@@ -7,7 +7,7 @@ title = Barcode
 package.name = barcode
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.testBarcode
+package.domain = org.Barcode
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -37,14 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = android,
-    kivy,
-    libiconv,
-    libzbar,
-    Pillow,
-    python3,
-    pyzbar,
-    xcamera
+requirements = python3,kivy, android,hostpython3,libiconv,libzbar,Pillow,pyzbar,xcamera
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -102,7 +95,7 @@ fullscreen = 1
 
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
-android.permissions = CAMERA
+android.permissions = android.permission.CAMERA
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
@@ -143,7 +136,7 @@ android.permissions = CAMERA
 # agreements. This is intended for automation only. If set to False,
 # the default, you will be shown the license when first running
 # buildozer.
-# android.accept_sdk_license = True
+android.accept_sdk_license = True
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.kivy.android.PythonActivity
@@ -409,10 +402,10 @@ ios.codesign.allowed = false
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 1
+log_level = 0
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
-warn_on_root = 1
+warn_on_root = 0
 
 # (str) Path to build artifact storage, absolute or relative to spec file
 # build_dir = ./.buildozer
